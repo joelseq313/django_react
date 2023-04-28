@@ -9,9 +9,6 @@ from rest_framework import routers
 from django.urls import path
 from django.urls import path
 from rest_framework import routers
-from oauth2_provider.views import TokenView
-
-from app.viewsets.linkedinview import LinkedInLoginView,LinkedInCallbackView
 
 
 
@@ -27,8 +24,6 @@ urlpatterns = [
     path('', include(router.urls)),
      path('login/', SignInViewSet.as_view(), name='login'),
      path('logout/',LogoutAPIView.as_view(), name='logout'),
-      path('linkedinlogin/', LinkedInLoginView.as_view(), name='linkedin-login'),
-    path('chris/linkedincallback/',LinkedInCallbackView.as_view(), name='linkedin-callback'),
     
 
 
